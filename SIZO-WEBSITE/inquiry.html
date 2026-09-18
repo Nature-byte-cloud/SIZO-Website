@@ -1,58 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved | Sizo Community Restoration Projects</title>
+
+    <meta name="description"
+        content="Get involved with SIZO Community Restoration Projects by submitting an inquiry.">
+
+    <meta name="keywords"
+        content="SIZO, get involved, volunteer, community projects, inquiry">
+
+    <meta name="author" content="SIZO Community Restoration Projects">
+
+    <title>SIZO Community Restoration Projects | Get Involved</title>
+
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Sizo Community Restoration Projects</h1>
+    <!-- =========================
+         HEADER AND NAVIGATION
+         ========================= -->
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="inquiry.html">Get Involved</a>
-            <a href="contact.html">Contact</a>
+    <header>
+
+        <h1>SIZO Community Restoration Projects</h1>
+
+        <nav aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="inquiry.html" aria-current="page">Get Involved</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
         </nav>
+
     </header>
 
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
     <main>
-        <h2>Get Involved</h2>
 
-        <p>
-            There are different ways you can support Sizo,
-            including volunteering, sponsorship and donations.
-        </p>
+        <!-- PAGE HEADER -->
 
-        <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+        <section class="page-header">
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <h2>Get Involved</h2>
 
-            <label for="interest">How would you like to help?</label>
-            <select id="interest" name="interest">
-                <option value="volunteer">Volunteer</option>
-                <option value="sponsor">Sponsor</option>
-                <option value="donate">Donate</option>
-            </select>
+            <p>
+                Interested in supporting SIZO Community Restoration
+                Projects? Complete the form below to submit an inquiry.
+            </p>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5"></textarea>
+        </section>
 
-            <button type="submit">Submit Inquiry</button>
-        </form>
+
+        <!-- INQUIRY FORM -->
+
+        <section class="content-section">
+
+            <h2>Submit an Inquiry</h2>
+
+            <p>
+                Please provide your details and tell us how you
+                would like to get involved.
+            </p>
+
+            <form>
+
+                <!-- NAME -->
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <!-- PHONE -->
+
+                <label for="phone">
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your contact number"
+                >
+
+
+                <!-- INVOLVEMENT TYPE -->
+
+                <label for="involvement">
+                    How would you like to get involved?
+                </label>
+
+                <select
+                    id="involvement"
+                    name="involvement"
+                >
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="volunteer">
+                        Volunteer
+                    </option>
+
+                    <option value="support">
+                        Support a Project
+                    </option>
+
+                    <option value="ideas">
+                        Share an Idea
+                    </option>
+
+                    <option value="partnership">
+                        Organisation or Partnership
+                    </option>
+
+                </select>
+
+
+                <!-- MESSAGE -->
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us how you would like to get involved..."
+                    required
+                ></textarea>
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit">
+                    Submit Inquiry
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ADDITIONAL INFORMATION -->
+
+        <section class="cta">
+
+            <h2>Every Contribution Matters</h2>
+
+            <p>
+                Whether you volunteer your time, support a project
+                or share an idea, your involvement can contribute
+                towards positive community development.
+            </p>
+
+            <a href="contact.html" class="button">
+                Contact Us
+            </a>
+
+        </section>
+
     </main>
 
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
     <footer>
-        <p>&copy; 2026 Sizo Community Restoration Projects</p>
+
+        <p>
+            &copy; 2026 SIZO Community Restoration Projects.
+            All rights reserved.
+        </p>
+
     </footer>
 
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

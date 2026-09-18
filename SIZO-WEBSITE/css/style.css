@@ -1,172 +1,338 @@
+/* ================================
+   SIZO COMMUNITY WEBSITE
+   Part 2 - Responsive CSS
+   ================================ */
+
+/* CSS RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* BASE STYLES */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* HEADER */
 header {
     background-color: #1f4d3a;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 1.25rem 5%;
 }
 
 header h1 {
-    margin-bottom: 15px;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
 }
 
-nav {
+/* NAVIGATION */
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover,
+nav a:focus {
+    background-color: #3b7a57;
 }
 
+nav a:active {
+    background-color: #163829;
+}
+
+/* MAIN CONTENT */
 main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
 }
 
-main h2 {
-    margin-bottom: 20px;
-    color: #1f4d3a;
-}
-
-main h3 {
-    margin-top: 20px;
-    color: #1f4d3a;
-}
-
-main p {
-    margin-bottom: 15px;
-}
-
-main a,
-button {
-    display: inline-block;
-    background-color: #1f4d3a;
-    color: white;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 600px;
-}
-
-input,
-select,
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-}
-
-footer {
-    background-color: #1f4d3a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    main {
-        margin: 20px;
-        padding: 20px;
-    }
-}
+/* HERO SECTION */
 .hero {
+    background-color: white;
+    padding: 3rem 2rem;
     text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 40px;
+    border-radius: 0.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
 }
 
 .hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #1f4d3a;
 }
 
 .hero p {
     max-width: 700px;
-    margin: 0 auto 25px;
+    margin: 0 auto 1.5rem;
 }
 
-.button {
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin: 1.5rem auto 0;
+}
+
+/* BUTTONS */
+.button,
+button {
     display: inline-block;
-    margin-top: 10px;
+    background-color: #1f4d3a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
 }
 
+.button:hover,
+button:hover {
+    background-color: #3b7a57;
+    transform: translateY(-2px);
+}
+
+.button:focus,
+button:focus {
+    outline: 3px solid #9ac9aa;
+    outline-offset: 2px;
+}
+
+.button:active,
+button:active {
+    transform: translateY(0);
+}
+
+/* SECTION HEADINGS */
+section h2 {
+    color: #1f4d3a;
+    font-size: 2rem;
+}
+
+/* CARDS */
 .cards {
-    display: flex;
-    gap: 20px;
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
 .card {
-    flex: 1;
-    padding: 25px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
-    margin-top: 0;
+    color: #1f4d3a;
 }
 
-.call-to-action {
+/* PAGE HEADER */
+.page-header {
+    background-color: #1f4d3a;
+    color: white;
+    padding: 2.5rem 2rem;
     text-align: center;
-    margin-top: 40px;
-    padding: 40px 20px;
-    border-radius: 8px;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
 }
 
-@media (max-width: 700px) {
+.page-header h2 {
+    font-size: 2.25rem;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+}
+
+/* LISTS */
+.content-section ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* FORMS */
+form {
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #bbb;
+    border-radius: 0.4rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: 3px solid #9ac9aa;
+    border-color: #1f4d3a;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* CALL TO ACTION */
+.cta {
+    background-color: #e8f1eb;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+}
+
+.cta h2 {
+    color: #1f4d3a;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1f4d3a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* ================================
+   TABLET BREAKPOINT
+   ================================ */
+
+@media (max-width: 900px) {
+
+    main {
+        width: 92%;
+    }
+
     .cards {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero h2 {
-        font-size: 28px;
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        gap: 0.75rem;
     }
 }
-.hero-image {
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
+
+/* ================================
+   MOBILE BREAKPOINT
+   ================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    header {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 
